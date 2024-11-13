@@ -1,0 +1,25 @@
+# Creating Linear Regression Models
+
+```{r}
+model1 <- lm(ADP_log ~ rs4244285, data = data)
+model2 <- lm(ADP_log ~ rs4986893, data = data)
+model3 <- lm(ADP_log ~ rs662, data = data)
+```
+
+# Summary of Linear Regression Model 1: ADP_log ~ rs4244285
+
+```{r}
+summary(model1)
+```
+
+# Summary of Linear Regression Model 2: ADP_log ~ rs4986893
+
+```{r}
+summary(model2)
+```
+
+# Summary of Linear Regression Model 3: ADP_log ~ rs662
+
+```{r}
+summary(model3)
+```

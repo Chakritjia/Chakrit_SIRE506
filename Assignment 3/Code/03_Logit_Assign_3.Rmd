@@ -1,0 +1,26 @@
+# Creating Logistic Regression Models
+
+```{r}
+logit_model1 <- glm(Resistance ~ rs4244285, data = data, family = binomial)
+logit_model2 <- glm(Resistance ~ rs4986893, data = data, family = binomial)
+logit_model3 <- glm(Resistance ~ rs662, data = data, family = binomial)
+```
+
+# Summary of Logistic Regression Model 1: Resistance ~ rs4244285
+
+```{r}
+summary(logit_model1)
+```
+
+# Summary of Logistic Regression Model 2: Resistance ~ rs4986893
+
+```{r}
+summary(logit_model2)
+```
+
+# Summary of Logistic Regression Model 3: Resistance ~ rs662
+
+```{r}
+summary(logit_model3)
+```
+

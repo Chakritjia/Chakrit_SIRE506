@@ -1,0 +1,47 @@
+# Creating Adjusted Models with
+
+```{r}
+model1_adj <- lm(ADP_log ~ rs4244285 + AGE + SEX, data = data)
+model2_adj <- lm(ADP_log ~ rs4986893 + AGE + SEX, data = data)
+model3_adj <- lm(ADP_log ~ rs662 + AGE + SEX, data = data)
+
+logit_model1_adj <- glm(Resistance ~ rs4244285 + AGE + SEX, data = data, family = binomial)
+logit_model2_adj <- glm(Resistance ~ rs4986893 + AGE + SEX, data = data, family = binomial)
+logit_model3_adj <- glm(Resistance ~ rs662 + AGE + SEX, data = data, family = binomial)
+```
+
+# Summary of Adjusted Linear Regression Model 1: ADP_log ~ rs4244285 + AGE + SEX
+
+```{r}
+summary(model1_adj)
+```
+
+# Summary of Adjusted Linear Regression Model 2: ADP_log ~ rs4986893 + AGE + SEX
+
+```{r}
+summary(model2_adj)
+```
+
+# Summary of Adjusted Linear Regression Model 3: ADP_log ~ rs662 + AGE + SEX
+
+```{r}
+summary(model3_adj)
+```
+
+# Summary of Adjusted Logistic Regression Model 1: Resistance ~ rs4244285 + AGE + SEX
+
+```{r}
+summary(logit_model1_adj)
+```
+
+# Summary of Adjusted Logistic Regression Model 2: Resistance ~ rs4986893 + AGE + SEX
+
+```{r}
+summary(logit_model2_adj)
+```
+
+# Summary of Adjusted Logistic Regression Model 3: Resistance ~ rs662 + AGE + SEX
+
+```{r}
+summary(logit_model3_adj)
+```

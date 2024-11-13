@@ -1,0 +1,48 @@
+# Creating Visualization
+# Histogram of ADP Levels
+
+```{r}
+ggplot(data, aes(x = ADP)) +
+  geom_histogram(binwidth = 5, fill = "cyan", color = "black") +
+  theme_minimal() +
+  labs(title = "Histogram of ADP Levels", x = "ADP Level", y = "Frequency")
+```
+
+# Boxplot of ADP Levels
+
+```{r} 
+ggplot(data, aes(y = ADP)) +
+  geom_boxplot() +
+  theme_minimal() +
+  labs(title = "Boxplot of ADP Levels", y = "ADP Level")
+```
+
+# Association between log ADP and rs4244285
+
+```{r}
+ggplot(data, aes(x = rs4244285, y = ADP_log)) +
+  geom_point() +
+  geom_smooth(method = "lm", color = "blue") +
+  theme_minimal() +
+  labs(title = "Association between log ADP and rs4244285", x = "rs4244285 Genotype (0, 1, 2)", y = "log(ADP)")
+```
+
+# Association between log ADP and rs4986893
+
+```{r}
+ggplot(data, aes(x = rs4986893, y = ADP_log)) +
+  geom_point() +
+  geom_smooth(method = "lm", color = "red") +
+  theme_minimal() +
+  labs(title = "Association between log ADP and rs4986893", x = "rs4986893 Genotype (0, 1, 2)", y = "log(ADP)")
+```
+
+# Association between log ADP and rs662
+
+```{r}
+ggplot(data, aes(x = rs662, y = ADP_log)) +
+  geom_point() +
+  geom_smooth(method = "lm", color = "green") +
+  theme_minimal() +
+  labs(title = "Association between log ADP and rs662", x = "rs662 Genotype (0, 1, 2)", y = "log(ADP)")
+```
